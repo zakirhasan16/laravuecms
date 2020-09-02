@@ -17,7 +17,7 @@ class CreateBlogCategoriesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('url');
-            $table->integer('ordering');
+            $table->integer('ordering')->default(0);
             $table->timestamps();
         });
     }
