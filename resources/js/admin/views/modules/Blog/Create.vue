@@ -41,10 +41,7 @@ export default {
     },
     data() {
         return {
-            form: {
-                educators: [],
-                modules: []
-            }
+            form: {}
         }
     },
 

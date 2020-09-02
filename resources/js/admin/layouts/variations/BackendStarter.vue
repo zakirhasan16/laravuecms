@@ -3,7 +3,7 @@
         <template #sidebar>
             <div class="content-header bg-white-5">
                 <router-link to="/admin" class="font-w600 text-dual">
-                    <i class="fa fa-user text-primary"></i><span class="font-w700 font-size-h5 ml-1 smini-hide">E-KursMerkezi</span>
+                    <i class="fa fa-user text-primary"></i><span class="font-w700 font-size-h5 ml-1 smini-hide">LaraVueCMS</span>
                 </router-link>
                 <div>
                     <base-layout-modifier size="sm" variant="dual" action="sidebarClose" class="d-lg-none ml-2">

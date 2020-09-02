@@ -1,8 +1,9 @@
 <template>
     <v-select
-        v-model="form.educators"
-        :options="educatorOptions"
+        v-model="form.category_id"
+        :options="categories"
         :reduce="o => o.id"
+        :clearable="false"
     >
         <template #no-options>Kayıt Bulunamadı</template>
     </v-select>
@@ -18,13 +19,13 @@ export default {
     },
     data() {
         return {
-            educatorOptions: []
+            categories: []
         }
     },
     mounted() {
-        this.request.get('/admin/educators')
+        this.request.get('/admin/blog-categories')
             .then(res => {
-                this.educatorOptions = res.data.data;
+                this.categories = res.data.data;
             })
     }
 }

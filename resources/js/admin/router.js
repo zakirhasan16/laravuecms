@@ -15,10 +15,6 @@ export default new Router({
     },
     routes: [
         {
-            path:'/control',
-            redirect: '/admin'
-        },
-        {
             path: '/admin',
             redirect: '/admin/dashboard',
             component: LayoutBackend,

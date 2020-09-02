@@ -43,8 +43,6 @@ export default {
         return {
             form: {
                 media: {},
-                educators: [],
-                modules: []
             }
         }
     },
@@ -55,7 +53,6 @@ export default {
     },
     methods: {
         onSubmit() {
-            this.form.educators = this.form.educators.map(i => i.id ? i.id : i)
             let formData = this.makeFormData(this.form, '')
             formData.append('_method', 'PUT')
 

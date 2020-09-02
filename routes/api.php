@@ -23,3 +23,13 @@ Route::group([
     Route::get('refresh', 'AuthController@refresh');
     Route::get('user', 'AuthController@user');
 });
+
+Route::group([
+    'middleware' => ['jwt.auth', 'isAdmin'],
+    'prefix' => 'admin'
+], function($router) {
+    Route::apiResource('blog-category', 'Admin\BlogCategoryController');
+    Route::apiResource('blog', 'Admin\BlogController');
+
+    Route::get('blog-categories', 'AdminController@blog_categories');
+});

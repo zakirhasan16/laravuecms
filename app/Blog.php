@@ -13,7 +13,8 @@ class Blog extends Model implements HasMedia
     protected $fillable = [
         'title',
         'url',
-        'content'
+        'content',
+        'category_id'
     ];
 
     public function category()
