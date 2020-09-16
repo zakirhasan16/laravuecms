@@ -1,14 +1,14 @@
 <template>
     <div>
-        <b-container class="pt-5">
-            Home
+        <b-container>
+
         </b-container>
     </div>
 </template>
 
 <script>
 export default {
-name: "Home"
+name: "Blogs"
 }
 </script>
 

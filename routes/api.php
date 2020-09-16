@@ -33,3 +33,13 @@ Route::group([
 
     Route::get('blog-categories', 'AdminController@blog_categories');
 });
+
+Route::group([
+    'middleware' => 'api',
+], function ($router) {
+    Route::get('blog-categories', 'FrontController@blog_categories');
+    Route::get('blogs', 'FrontController@blogs_search');
+    Route::get('blogs/{url}', 'FrontController@category_blogs');
+    Route::get('blog/{url}', 'FrontController@blog');
+
+});

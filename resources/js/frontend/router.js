@@ -8,10 +8,6 @@ export default new VueRouter({
     mode: 'history',
     routes: [
         {
-            path: '/',
-            component: require(/* webpackChunkName: "Home"*/ './views/Home').default
-        },
-        {
             path: '/admin/login',
             name: 'login',
             meta: {
@@ -34,6 +30,32 @@ export default new VueRouter({
                 roles: 'admin'
             },
             component: require(/* webpackChunkName: "adminAuth" */ './views/Control.vue').default,
+        },
+        {
+            path: '/',
+            component: require(/* webpackChunkName: "Main"*/ './views/Main').default,
+            children: [
+                {
+                    path: '',
+                    component: require(/* webpackChunkName: "Home"*/ './views/Home').default,
+                    name: 'Home'
+                },
+                {
+                    path: 'c/:url',
+                    component: require(/* webpackChunkName: "CategoryBlogs"*/ './views/CategoryBlogs').default,
+                    name: 'CategoryBlogs'
+                },
+                {
+                    path: 'b/:url',
+                    component: require(/* webpackChunkName: "CategoryBlogs"*/ './views/BlogDetail').default,
+                    name: 'BlogDetail'
+                },
+                {
+                    path: 'search',
+                    component: require(/* webpackChunkName: "CategoryBlogs"*/ './views/SearchResults').default,
+                    name: 'SearchResults'
+                }
+            ]
         },
     ]
 })

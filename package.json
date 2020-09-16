@@ -33,6 +33,7 @@
         "@riophae/vue-treeselect": "^0.4.0",
         "@syncfusion/ej2-vue-richtexteditor": "^18.2.54",
         "@websanova/vue-auth": "^3.3.0",
+        "animate.css": "^4.1.1",
         "bootstrap": "^4.4.1",
         "bootstrap-vue": "^2.9.0",
         "chart.js": "^2.9.3",

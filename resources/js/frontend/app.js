@@ -6,6 +6,8 @@ import App from './App.vue'
 import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue)
 
+import "animate.css"
+
 window.Vue = Vue;
 Vue.router = router;
 
