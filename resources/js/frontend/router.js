@@ -24,14 +24,6 @@ export default new VueRouter({
             component: require(/* webpackChunkName: "adminAuth" */ './views/Control.vue').default,
         },
         {
-            path: '*',
-            meta: {
-                auth: true,
-                roles: 'admin'
-            },
-            component: require(/* webpackChunkName: "adminAuth" */ './views/Control.vue').default,
-        },
-        {
             path: '/',
             component: require(/* webpackChunkName: "Main"*/ './views/Main').default,
             children: [
@@ -56,6 +48,14 @@ export default new VueRouter({
                     name: 'SearchResults'
                 }
             ]
+        },
+        {
+            path: '*',
+            meta: {
+                auth: true,
+                roles: 'admin'
+            },
+            component: require(/* webpackChunkName: "adminAuth" */ './views/Control.vue').default,
         },
     ]
 })
